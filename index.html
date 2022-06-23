@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+  <title>Vite App</title>
+</head>
+
+<body>
+
+  <div x-data="loveCounter">
+
+    <div class="login" x-show="isLoggedIn">
+      <h2 class="title">Login</h2>
+      <div class="input-field">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Username" x-model="username" />
+      </div>
+      <div class="input-field">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" x-model="password" />
+      </div>
+      <button class="Mdesign AW" @click="handleLogin()">Sign In</button>
+    </div>
+
+    <div class="signup" x-show="isSignedUp">
+      <h2 class="title">Sign up</h2>
+      <div class="input-field">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Username" x-model="username" />
+      </div>
+      <div class="input-field">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" x-model="password" />
+      </div>
+      <button class="Mdesign AW" @click="handleRegister()">Register</button>
+    </div>
+
+    <div x-show="show = false">
+      <h1 x-text="user.username"></h1>
+      <h1>Show some heart</h1>
+      <div x-text="hearts()">
+      </div>
+      <div>
+        <button @click="handleCountUp">Count Up💟</button>
+      </div>
+
+      <div>
+        <button @click="handleCountDown">Count Down💟</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- <div id="app" x-show="show">
+  </div> -->
+
+  <!-- 
+  <div x-data="quoteApp" class="quote">
+    <h1>Quote App</h1>
+    <button @click="getQuote()">Next quote 📢</button>
+    <div class="quote">
+      <div x-text="quote.quote" class="content"></div>
+      <div>
+        <strong>by </strong><span x-text="quote.author"></span>
+      </div>
+    </div>
+  </div> -->
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
