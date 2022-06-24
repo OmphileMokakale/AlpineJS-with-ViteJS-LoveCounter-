@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^2.9.9",
+    "vite": "^2.9.12",
     "vite-plugin-mix": "^0.3.1"
   },
   "dependencies": {

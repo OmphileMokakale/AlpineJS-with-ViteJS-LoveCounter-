@@ -2,8 +2,8 @@ import axios from 'axios';
 export default function LoveCounter() {
   return {
     loveCounter: 0,
-    show: false,
-    isSignedUp: false,
+    // show: false,
+    // isSignedUp: false,
     isLoggedIn: true,
     username: '',
     password: '',
